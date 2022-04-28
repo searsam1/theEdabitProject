@@ -1,4 +1,4 @@
-# theEdabitProject
+# theEdabitProject 💻🖥
 Store of Edabit Challenges.
 ## The Fastest Way To Learn
 """ Everyone knows the fastest way to learn a spoken language is by having conversations with native speakers. 
