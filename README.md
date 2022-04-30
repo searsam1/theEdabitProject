@@ -3,6 +3,8 @@ Store of Edabit Challenges.
 
 For a couple years now I have been completing "edabit" challenges; edabit challenges are functions that one must create in order to solve a particular problem given in the instructions. As of April 29th, 2022, I am only recording the python ones that I solve. Edabit also comes in a variet of flavors you see; each challenge has multiple langs that it can be solved in. I am only including the python ones here because my spider that I created only knows how to scrape python syntax. They also come in differnt diffuculty levels, but for sake of simplicty I will be condensing them all here in theEdabitProject /Python repository. 
 
+I want to share with future employers how active of a coder I am in my daily life. A good way to do that is by writing code and uploading it to show contributions on Github. 
+Edabit offers me a way to have something to code to satisfy the want to program. Sometimes the ideas run dry and you need some ideas on what to do/ code next when you are on your own, not yet working for a company. 
 
 
 
