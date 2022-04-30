@@ -6,7 +6,8 @@ For a couple years now I have been completing "edabit" challenges; edabit challe
 I want to share with future employers how active of a coder I am in my daily life. A good way to do that is by writing code and uploading it to show contributions on Github. 
 Edabit offers me a way to have something to code to satisfy the want to program. Sometimes the ideas run dry and you need some ideas on what to do/ code next when you are on your own, not yet working for a company. 
 
-
+## The Edabit WebScraper / spider / crawler
+One reason I am able to do this is with the power of coding, of course. Python's Selenium module allows me to type a single command and get all the information I need saved to my computer. This is important for debugging / trying to solve a problem. If one has to wait for a server to return the results and you are rapidly trying to figure something out, it takes a lot of time and causes anger. On the other hand, however, being able to download and run all the tests I need really saves me time and effort, alone with letting me get more done and write cleaner code. 
 
 
 ## The Fastest Way To Learn
