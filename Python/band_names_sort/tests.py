@@ -5,9 +5,10 @@ class Test(unittest.TestCase):
 	
 	checks = [] 
 	def assert_equals(a,b,message=None,checks=checks):
-		print(a,b,sep="  ->  ")
+		print(a,b,sep="  ->  \n\n")
 		checks.append(["Fail","Pass"][a==b])
-		print("\t",checks,"\n")
+		print("\n")
+		print(checks)
 
 band_names = [["The Plot in You", "The Devil Wears Prada", "Pierce the Veil", "Norma Jean", "The Bled", "Say Anything", "The Midway State", "We Came as Romans", "Counterparts", "Oh, Sleeper", "A Skylit Drive", "Anywhere But Here", "An Old Dog"],
 		['The New Yardbirds', 'The Beatles', 'The Square Roots', 'On A Friday', 'An Irony'], 
