@@ -1,8 +1,8 @@
 # theEdabitProject
 Store of Edabit Challenges.
 
-### Below Is a collection of all the python challenges in the repository
-### I got them with this Python Script:
+Below Is a collection of all the python challenges in the repository
+I got them with this Python Script:
 ```
 from string import punctuation
 import clipboard
