@@ -1,0 +1,16 @@
+Anna Likes Daniel
+	Published by Mubashir Hassan in Python
+Languages
+C++
+Java
+Script
+Python
+Ruby
+
+
+regexstringsvalidation
+Anna is a strange girl. She likes certain boys, but not others. You have to figure out why she likes some, and not the others.
+~Examples~
+anna_likes("David") ➞ False anna_likes("Samuel") ➞ True anna_likes("Gary") ➞ False
+~Notes~
+All names / inputs are valid.Anna likes her own name.Check the Tests tab for all 100 examples.Try to solve this one using RegEx.

@@ -1,0 +1,16 @@
+Determinant of Square Matrix
+	Published by Mubashir Hassan in Python
+Languages
+C++
+Java
+Script
+Python
+Ruby
+
+
+algebraalgorithmsinterviewmath
+In linear algebra, the determinant is a scalar value that can be computed from the elements of a square matrix and encodes certain properties of the linear transformation described by the matrix.Create a function that takes a square list as an argument and returns a number (determinant).
+~Examples~
+get_det([ [ 0, 1], [ 1, 1] ]) ➞ -1 get_det([ [69, 0], [1, 1] ]) ➞ 69 get_det([ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]) ➞ 0
+~Notes~
+N/A
