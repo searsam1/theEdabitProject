@@ -7,10 +7,28 @@ def staircase(n):
 		right = i * "#"
 		
 		if is_neg:
-			left,right = right, left
+			left,right = right,left
 
 		s = left + right + "\n"
 		string += (s)
 		
 	return string.strip("\n") if not is_neg else string.strip("\n")[::-1]
 #
+
+l = r"""	
++---?-----------------------------------------------+
+|  / 	{}        {-} +       {----}     {------}   |
+| /           +                 *                   |
+?/    ------	  |     +     |			 |	    +   |
+|    / 		\	  |     +     |-----/    {          |
+|   /--------\	  |           |		     |    +     |
+|  /  		  \	  |  $   /    |    *     |          | 
+|  \          /	  |=====/     +------/   |-------+  |
++---------------------------------------------------+   
+
+""".replace(" ","A")
+
+
+print(l.encode())
+
+
