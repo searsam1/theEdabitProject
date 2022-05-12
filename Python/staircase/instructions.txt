@@ -1,0 +1,31 @@
+Underscore-Hash Staircase
+	Published by Deep Xavier in Python
+Languages
+Java
+Script
+Python
+
+
+arrayslogicstrings
+Create a function that will build a staircase using the underscore _ and hash # symbols. A positive value denotes the staircase's upward direction and downwards for a negative value.
+~Examples~
+staircase(3) ➞ "__#
+_##
+###" __# _## ### staircase(7) ➞ "______#
+_____##
+____###
+___####
+__#####
+_######
+#######" ______# _____## ____### ___#### __##### _###### ####### staircase(2) ➞ "_#
+##" _# ## staircase(-8) ➞ "########
+_#######
+__######
+___#####
+____####
+_____###
+______##
+_______#" ######## _####### __###### ___##### ____#### _____### ______## _______#
+~Notes~
+All inputs are either positive or negative values.The string to be returned is adjoined with the newline character (
+).A recursive version of this challenge can be found in here.
