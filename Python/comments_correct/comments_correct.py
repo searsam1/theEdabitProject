@@ -1,2 +1,2 @@
 def comments_correct(txt):
-	pass
+	return not txt.count("/") % 2 and not txt.count("*") % 2

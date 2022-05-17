@@ -8,7 +8,7 @@ class Test(unittest.TestCase):
 		print(a,b,sep="  ->  ")
 		checks.append(["Fail","Pass"][a==b])
 		print("\t",checks,"\n")
-
+"5>-1<0==0<-5>5==5"
 Test.assert_equals(validate_relationships("5>-1<0=0<-5>5=5"), False)
 Test.assert_equals(validate_relationships("-15<-10<=0=0<5"), True)
 Test.assert_equals(validate_relationships("0=807<1000<=1000>9990<-3605<=20"), False)

@@ -11,22 +11,18 @@ def sle(m):
 		div = arr1.pop(0)
 		arr1 = [i for i in arr1]
 		
-		arr2[1] *= a
-		arr2[2] *= a
+		arr1[1] *= a
+		arr1[2] *= a
 
 		y_s = d * arr1[1] + arr2[1]
 		c = arr2[-1] - d * arr1[0]
 		y = y_s / c
 		
-		x = None
-		if e < 0:
-			x = (f + e) / d
-		else:
-			x = (e - f) / d
+		x = (e - f) / d
+		print(x,y)
 		return (x,y)
 	except Exception:
 		return 0
-sle([[2, 3, 13], [5, -1, 7]])
 
 
 
