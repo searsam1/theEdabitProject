@@ -1,0 +1,2 @@
+def lemonade(bills):
+	pass
