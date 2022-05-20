@@ -7,7 +7,10 @@ class Test(unittest.TestCase):
 	def assert_equals(a,b,message=None,checks=checks):
 		print(a,b,sep="  ->  ")
 		checks.append(["Fail","Pass"][a==b])
-		print("\t",checks,"\n")
+		if a != b:
+			print(f"\n\nTEST::{len(checks)}\n\n \t{a} \nShould EQUAL\n \t{b}\n")
+		else:
+			print("✅",end=" ")
 
 Test.assert_equals(lowest_element([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1, 1), 1)
 Test.assert_equals(lowest_element([[0, 3, 6], [1, 4, 7], [2, 5, 8]], 2, 2), 4)
