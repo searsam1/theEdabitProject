@@ -1,0 +1,2 @@
+def elasticize(word):
+	pass
