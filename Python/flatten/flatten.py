@@ -1,21 +1,19 @@
 
-def flatten(arr):	
+def flatten(r):	
 	
-	res = [] 
-	if isinstance(arr, list):
-		for i in arr:
-			res.append(flatten(i))
+	# res = lambda r : sum([flatten(i) for i in r], []) if type(r) is list else [r]
+	# Credit: Deep Xavier
+
+	if type(r) is list:
+		return sum([flatten(i) for i in r], [])
 	else:
-		return arr
-	if isinstance(res, list):
-		for i in res:
-			x = flatten(i)
-			if x:
-				print(x)
+		return [r]
+
+
 		
 
 
-x = flatten([[[[[["direction"], [372], ["one"], [[[[[["Era"]]]], "Sruth", 3337]]], "First"]]]])
-print(main)
+x = flatten([[1,2,3,4],[5,6,7,8,[9,10,11,12]]])
+print(x)
 
 
