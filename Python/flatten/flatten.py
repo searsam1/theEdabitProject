@@ -1,7 +1,4 @@
-#//x = all(not isinstance(ele, list) for ele in arr) # thats the key
 
-
-main = []
 def flatten(arr):	
 	
 	res = [] 
