@@ -1,4 +1,5 @@
 from left_rotations import left_rotations
+from left_rotations import right_rotations
 import unittest
 
 class Test(unittest.TestCase):
