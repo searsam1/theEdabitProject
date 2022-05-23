@@ -1,0 +1,2 @@
+def column(txt):
+	pass
