@@ -1,0 +1,2 @@
+def phi(n):
+	pass
