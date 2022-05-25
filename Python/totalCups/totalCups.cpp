@@ -1,3 +1,3 @@
 int totalCups(int n) {
-	
-}pass
+	return n / 6 + n;
+}
