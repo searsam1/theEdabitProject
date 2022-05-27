@@ -1,13 +1,11 @@
 from exit_maze import exit_maze
 import unittest
-
+checks = [] 
 class Test(unittest.TestCase):
 	
-	checks = [] 
+	
 	def assert_equals(a,b,message=None,checks=checks):
-		print(a,b,sep="  ->  ")
-		checks.append(["Fail","Pass"][a==b])
-		print("\t",checks,"\n")
+		assert a == b
 
 maze = [
 	[1,1,1,1,1,1,1,1,0,1],

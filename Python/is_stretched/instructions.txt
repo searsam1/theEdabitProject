@@ -1,0 +1,17 @@
+Is a String Stretched?
+	Published by Helen Yu in Python
+Languages
+C++
+Java
+Java
+Script
+Python
+Ruby
+
+
+stringsvalidation
+Write a function that returns True if the first string is the second string stretched, and False otherwise. A stretch is to repeat each character in a string the same number of times.
+~Examples~
+is_stretched("pppaaannndddaaa", "panda") ➞ True is_stretched("sssshhiipp", "ship") ➞ False is_stretched("magnet", "magnet") ➞ True is_stretched("magneto", "magnet") ➞ False
+~Notes~
+Both strings must contain the same letters in order for the stretch to be valid.All strings will be in lower case letters.
