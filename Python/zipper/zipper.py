@@ -1,19 +1,23 @@
 def zipper(lst1, lst2):
-	
-	
-	l1, l2 = "".join(str(i) for i in lst1), "".join(str(i) for i in lst2)
-	
-	for i in range(len(l1)):
-		if l1[i:] in l2:
-			l2_idx = l2.index(l1[i:]) - 1
-			l1_idx = i - 1
-			return [l1_idx, l2_idx]
+	if lst1 == lst2:
+		return True
+	if lst1[-1] != lst2[-1]:
+		return False
+	l1, l2 = lst1, lst2
+	if len(lst1) < len(lst2):
+		l1, l2 = lst2, lst1
 
+	offset = 0 
 
+	while len(l1) > len(l2):
+		l2.insert(0, "f")
+		offset += 1
+	z = list(zip(l1,l2))
+	for i in range(len(z)):
+		tup = z[i]
+		if len(set(tup)) == 1:
+			print(tup)
+			i -= 1
+			return [i-offset,i]
 
-
-print(zipper(
-	[5, 5, 7, 8, 9, 1, 2], 
-	[3, 2, 1, 1, 6, 6, 6, 6, 1, 2]
-	))
 

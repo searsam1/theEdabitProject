@@ -1,2 +1,3 @@
 def single_number(nums):
-	pass
+	s = sorted(set(nums), key=lambda x : nums.count(x) )
+	return s[0]
