@@ -1,0 +1,2 @@
+def depth(lst):
+	pass
