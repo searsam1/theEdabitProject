@@ -5,9 +5,7 @@ class Test(unittest.TestCase):
 	
 	checks = [] 
 	def assert_equals(a,b,message=None,checks=checks):
-		print(a,b,sep="  ->  ")
-		checks.append(["Fail","Pass"][a==b])
-		print("\t",checks,"\n")
+		assert a == b
 
 Test.assert_equals(all_pairs([2, 4, 5, 3], 7), [[2, 5], [3, 4]])
 Test.assert_equals(all_pairs([5, 3, 9, 2, 1], 3), [[1, 2]])
