@@ -1,0 +1,7 @@
+ADD RESOURCEHow to generate all permutations of a list?stackoverflow.comSta-
+rting with Python 2.6 (and if you're on Python 3) you have a standard-libra-
+ry tool for this: itertools.permutations.
+
+import itertools
+list(itertools.-
+permutations([1 …1 Edit

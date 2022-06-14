@@ -1,0 +1,4 @@
+ADD RESOURCEjava script website may helpwww.javascript.comcoding is awesome-
+6 EditCount Number of Animals in a Zoo From Given Number of Head and Legsww-
+w.geeksforgeeks.orgGiven the total number of Legs and Head of Rabbits and P-
+igeons. The task is to calculate the number of Rabbits and Pigeons.2 Edit

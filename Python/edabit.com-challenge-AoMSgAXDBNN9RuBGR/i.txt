@@ -1,0 +1,15 @@
+The Farm ProblemPublished by Helen Yu in PHPLanguagesC++C#JavaJavaScriptPHP-
+PythonRubySwiftTranslatealgorithmslanguage_fundamentalsmathIn this challeng-
+e, a farmer is asking you to tell him how many legs can be counted among al-
+l his animals. The farmer breeds three species:chickens = 2 legscows = 4 le-
+gspigs = 4 legsThe farmer has counted his animals and he gives you a subtot-
+al for each species. You have to implement a function that returns the tota-
+l number of legs of all the animals.Examplesanimals(2, 3, 5) ➞ 36
+
+animals(-
+1, 2, 3) ➞ 22
+
+animals(5, 2, 8) ➞ 50NotesDon't forget to return the result.-
+The order of animals passed is animals(chickens, cows, pigs).Remember that -
+the farmer wants to know the total number of legs and not the total number -
+of animals.Watch a quick demo on how Edabit works.WATCH DEMO
