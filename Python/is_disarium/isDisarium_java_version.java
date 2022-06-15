@@ -11,6 +11,13 @@
 */
 public class DisariumNumber {
 	public static boolean isDisarium(int n) {
-		
+		String stringN = new Integer(n).toString();
+	  	
+	  int sum = 0;	
+	  for (int i=0; i<stringN.length(); i++){
+		  	
+			sum = sum + Integer.valueOf(stringN.charAt(i));
+		}
+	  	return true;
 	}
 }
