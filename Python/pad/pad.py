@@ -1,0 +1,2 @@
+def pad(message):
+	pass
