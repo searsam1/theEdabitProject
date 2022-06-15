@@ -1,0 +1,18 @@
+Is the Input Factorial of an Integer?
+	Published by Deep Xavier in Python
+Languages
+C++
+C#
+Java
+Java
+Script
+Python
+Ruby
+
+
+loopsmathrecursionvalidation
+Create a function that checks if a given integer is exactly the factorial of an integer or not. True if it is, False otherwise.
+~Examples~
+is_factorial(2) ➞ True # 2 = 2 * 1 = 2! is_factorial(27) ➞ False is_factorial(24) ➞ True # 24 = 4 * 3 * 2 * 1 = 4!
+~Notes~
+No error handling is necessary. Inputs are all positive integers.Alternatively, you can solve this with a recursive approach.There are similar versions of this challenge that is a bit more challenging than this one (a recursive and a non-recursive).
