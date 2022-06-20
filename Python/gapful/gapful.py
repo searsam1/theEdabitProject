@@ -1,0 +1,2 @@
+def gapful(n):
+	pass
