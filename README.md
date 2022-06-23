@@ -1,3 +1,5 @@
-Challenges are all from edabit.com
+- Credit // Sources
 
-Directories are named by challenge ID
+  - Challenges are all from **edabit.com**
+
+  - Directories are named by **challenge ID**
