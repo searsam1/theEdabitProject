@@ -10,6 +10,5 @@ If you're really stuck, unlock solutions in the Solutions tab.
 
 countWords("This is a test") ➞ 4
 
-countWords("What an easy task, right") ➞ 5
+countWords("What an easy task, right") ➞ 5```
 <br><br>
-```
