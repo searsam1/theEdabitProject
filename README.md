@@ -1,5 +1,5 @@
 - Credit // Sources
 
-  - Challenges are all from **edabit.com**
+  - Challenges are all from \*\*\* **edabit.com** \*\*\* 
 
-  - Directories are named by **challenge ID**
+  - Directories are named by \*\*\* **challenge ID** \*\*\* 
