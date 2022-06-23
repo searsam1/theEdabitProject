@@ -7,8 +7,7 @@ Don't forget to return the result.
 If you get stuck on a challenge, find help in the Resources tab.
 If you're really stuck, unlock solutions in the Solutions tab.'
 <br><br>
-[link](https://edabit.com/challenge/SFzHtm63XT6EYNHWY
-)'
+[link](https://edabit.com/challenge/SFzHtm63XT6EYNHWY)'
 <br><br>
 ```addition(3, 2) ➞ 5
 
