@@ -1,5 +1,16 @@
 function FizzBuzz(num) {
-	
+	function FizzBuzz(num) {
+		if (num % 15 == 0){
+	  return "FizzBuzz";
+	}
+  	if (num % 5 == 0){
+	  return "Buzz";
+	}
+  	if (num % 3 == 0){
+	  return "Fizz";
+	}
+  	return num.toString();
+}
 }
 
 TestsConsoleTest.assertEquals(FizzBuzz(3), "Fizz", "You gave " + FizzBuzz(3) + " and Fizz was needed")
