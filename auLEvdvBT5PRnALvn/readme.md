@@ -19,3 +19,10 @@ mirror_cipher(message, key) ➞ "tuzishar hissid"
 ```
 
 <br><br>
+
+> Ignoring case, M is present in the key at index position 9. The mirror character is the character in the key which is the same distance from the end of the key (counting backwards). The mirror character is therefore at index position 5 - which is t.
+
+> The second character is not in the key so is not transposed.
+
+> The third character, b, is at index 3. It's mirror is at index 11 - which is z.
+
