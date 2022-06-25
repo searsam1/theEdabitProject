@@ -2,6 +2,12 @@ using System.Linq;
 public class Program {
 	public static string SeriesResistance(double[] arr) {
 		
+	  	if (arr.Sum() <= 1) 
+	  		return arr.Sum().ToString() + " ohm";
+	 	else{
+		  return arr.Sum().ToString() + " ohms";
+		}
+			  
 	}
 }
 
