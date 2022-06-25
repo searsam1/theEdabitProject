@@ -1,5 +1,6 @@
 def count_d(sentence)
 	
+    return sentence.count("d") + sentence.count("D")
 end
 
 TestsConsoleTest.assert_equals(count_d("My friend Dylan got distracted at school"), 4)
