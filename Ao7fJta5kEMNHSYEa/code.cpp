@@ -1,9 +1,17 @@
 #include <string>
 using namespace std; 
 string  fizzBuzz(int num){
-	
+	if (num % 15 == 0){
+	  return "FizzBuzz";
+	}
+  	if (num % 5 == 0){
+	  return "Buzz";
+	}
+  	if (num % 3 == 0){
+	  return "Fizz";
+	}
+  	return to_string(num);
 }
-
 TestsConsoleDescribe(FizzBuzz_test) {
 
 	It(test1){Assert::That(fizzBuzz(3), Equals("Fizz"));}
