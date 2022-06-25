@@ -1,7 +1,9 @@
+using System.Linq;
 public class Program {
 	public static int CountDs(string str)
 	{
-		
+		str = str.ToLower();
+		return str.Count(s => s == 'd');
 	}
 }
 
