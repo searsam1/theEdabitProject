@@ -1,14 +1,27 @@
+from itertools import combinations
+
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
 def prime_pair_list(num):
-	
+    arr = [i for i in range(2,num) if is_prime(i)]
+    
+    new_arr = [] 
+    for i in arr:
+        if i * 2 == num:
+            new_arr.append(i), new_arr.append(i)
+        else:
+            new_arr.append(i)
+    arr = new_arr
 
-TestsConsoleTest.assert_equals(prime_pair_list(10), ["3+7", "5+5"])
+    p = list(combinations(arr, 2))
+    
+    res = ["{0}+{1}".format(tup[0], tup[1]) 
+        for tup in p if sum(tup) == num]
+    return res
 
-Test.assert_equals(prime_pair_list(20), ["3+17", "7+13"])
-
-Test.assert_equals(prime_pair_list(30), ["7+23", "11+19", "13+17"])
-
-Test.assert_equals(prime_pair_list(50), ["3+47", "7+43", "13+37", "19+31"])
-
-Test.assert_equals(prime_pair_list(80), ["7+73", "13+67", "19+61", "37+43"])
-
-Test.assert_equals(prime_pair_list(100), ["3+97", "11+89", "17+83", "29+71", "41+59", "47+53"])
+res = prime_pair_list(10)
+print(res)
