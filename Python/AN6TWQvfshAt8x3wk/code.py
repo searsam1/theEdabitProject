@@ -1,7 +1,18 @@
 def brackets(exp):
 	
+	s = "".join(i for i in exp if i == "(" or i == ")")
+	if len(s) == 0:
+		return True
+	return s.count("(") == s.count(")") and s[0] != ")" and s[-1] != "("
+    
 
-TestsConsoleTest.assert_equals(brackets("(a*(b-c)     )"), True)
+class Test():
+
+    def assert_equals(a,b):
+        print(a,b)
+
+
+
 
 Test.assert_equals(brackets(" ) (a-b-45/7*(a-34))"), False)
 
