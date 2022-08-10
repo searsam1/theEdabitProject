@@ -42,3 +42,7 @@ def run_tests():
 
     if sum(Test.checklist) == len(Test.checklist):
         print("All Tests Passed.")
+
+
+for i in g1.board:  
+    print(i)       
