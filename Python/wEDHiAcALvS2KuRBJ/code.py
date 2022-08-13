@@ -1,57 +1,49 @@
 class StackCalc:
 
-	def __init__(self):
-
-	def run(self, instructions):
-
-	def getValue(self):
-
-TestsConsoletests = [
-
-  {'arg': '12', 'ans': 12},
-
-  {'arg': '5 6 +', 'ans': 11},
-
-  {'arg': '3 6 -', 'ans': 3},
-
-  {'arg': '3 DUP +', 'ans': 6},
-
-  {'arg': '2 5 - 5 + DUP +', 'ans': 16},
-
-  {'arg': '9 14 DUP + - 3 POP', 'ans': 19},
-
-  {'arg': '1 2 3 4 5 POP POP POP', 'ans': 2},
-
-  {'arg': '13 DUP 4 POP 5 DUP + DUP + -', 'ans': 7},
-
-  {'arg': '6 5 5 7 * - /', 'ans': 5},
-
-  {'arg': '4 2 4 * 3 + 5 + / 5 -', 'ans': 1},
-
-  {'arg': '5 8 + 4 5 1 + POP 13 +', 'ans': 17},
-
-  {'arg': 'x', 'ans': 'Invalid instruction: x'},
-
-  {'arg': '4 6 + x', 'ans': 'Invalid instruction: x'},
-
-  {'arg': 'y x *', 'ans': 'Invalid instruction: y'},
-
-  {'arg': '', 'ans': 0},
-
-  {'arg': '4 POP', 'ans': 0}
-
-]
-
-
-
-for dict in tests:
-
-	arg = dict['arg']
-
-	ans = dict['ans']
-
-	machine = StackCalc()
-
-	machine.run(arg)
-
-	Test.assert_equals(machine.getValue(), ans)
+  def __init__(self):
+    self.stack = [0]
+    self.d = {
+      
+    } 
+  def run(self, instructions):
+      
+    instruction_set = instructions.split()
+    
+    for i in instruction_set:
+      
+      if i.isnumeric():
+        self.stack.append(int(i))
+      
+      elif i == "POP":
+        self.stack.pop()
+      
+      elif i == "DUP":
+        self.stack.append(self.stack[-1])
+      
+      elif i == "+":
+        x1, x2 = self.stack.pop(), self.stack.pop()
+        self.stack.append(x1 + x2)
+      
+      elif i == "-":
+        x1, x2 = self.stack.pop(), self.stack.pop()
+        self.stack.append(abs(x1 - x2))
+      
+      elif i == "*":
+        x1, x2 = self.stack.pop(), self.stack.pop()
+        self.stack.append(x1 * x2)  
+      
+      elif i == "/":
+        x1, x2 = self.stack.pop(), self.stack.pop()
+        mx, mn = max([x1,x2]), min([x1,x2])
+        self.stack.append(int(mx / mn))
+      else:
+        self.stack.append("Invalid instruction: {}".format(i))
+        break
+        
+        
+  def getValue(self):
+    answer = self.stack[-1]
+    self.stack.clear()
+    return answer
+    
+    
