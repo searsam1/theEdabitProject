@@ -1,30 +1,20 @@
-def ry_seq(n, s):
-	
+# Alec Sears
+def factorial(n):
+    total = n
+    while n > 1:
+        n -= 1
+        total += n
+    return total
 
-TestsConsoleTest.assert_equals(ry_seq(2, "all"), 5)
-
-Test.assert_equals(ry_seq(1, "yellow"), 0)
-
-Test.assert_equals(ry_seq(1, "blue"), False)
-
-Test.assert_equals(ry_seq(28, "red"), 55)
-
-Test.assert_equals(ry_seq(6, "all"), 61)
-
-Test.assert_equals(ry_seq(3), False)
-
-Test.assert_equals(ry_seq(0, "all"), 0)
-
-Test.assert_equals(ry_seq(22, "all"), 925)
-
-Test.assert_equals(ry_seq(28, "yellow"), 1458)
-
-Test.assert_equals(ry_seq(23, "red"), 45)
-
-Test.assert_equals(ry_seq(150, "all"), 44701)
-
-Test.assert_equals(ry_seq(30, "yellow"), 1682)
-
-Test.assert_equals(ry_seq(1000, "red"), 1999)
-
-Test.assert_equals(ry_seq(28, "green"), False)
+def ry_seq(n, s=None):
+    red, length, total = n * 2 - 1, n * 2 - 1, n * 2 - 1
+    while length > 1:
+        length -= 2
+        total += length * 2
+    yellow = total - red
+    if n == 0:
+        red, yellow, total = 0,0,0
+    if s in ["all", "red", "yellow"]:
+        return {"all": total, "red" : red, "yellow" : yellow}[s]
+    return False
+#
