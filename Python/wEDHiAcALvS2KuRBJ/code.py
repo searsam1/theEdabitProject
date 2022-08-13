@@ -3,7 +3,7 @@ class StackCalc:
   def __init__(self):
     self.stack = [0]
     self.d = {
-      
+      "PUSH" : lambda i : self.stack.append(int(i))
     } 
   def run(self, instructions):
       
