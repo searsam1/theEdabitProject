@@ -1,20 +1,12 @@
+
+def factors(n):
+    factors_list = [i for i in range(2,n) if not n % i]
+    return factors_list
+
 def semiprime(n):
-	
-
-TestsConsoleTest.assert_equals(semiprime(49), "Semiprime")
-
-Test.assert_equals(semiprime(15), "Squarefree Semiprime")
-
-Test.assert_equals(semiprime(19), "Neither")
-
-Test.assert_equals(semiprime(75), "Neither")
-
-Test.assert_equals(semiprime(169), "Semiprime")
-
-Test.assert_equals(semiprime(203), "Squarefree Semiprime")
-
-Test.assert_equals(semiprime(177), "Squarefree Semiprime")
-
-Test.assert_equals(semiprime(125), "Neither")
-
-Test.assert_equals(semiprime(70), "Neither")
+    length = len(factors(n))
+    if length == 1:
+        return "Semiprime"
+    elif length == 2 and all(len(factors(i)) == 0 for i in factors(n)):
+        return "Squarefree Semiprime"
+    return "Neither"
