@@ -1,24 +1,17 @@
+#
 def is_self_describing(num):
-	
+    n = str(num)
+    if len(str(num)) % 2:
+        return False 
 
-TestsConsoleTest.assert_equals(is_self_describing(10123331), True, "Example #1")
-
-Test.assert_equals(is_self_describing(224444), True, "Example #2")
-
-Test.assert_equals(is_self_describing(2211), False, "Example #3")
-
-Test.assert_equals(is_self_describing(333), False, "Example #4")
-
-Test.assert_equals(is_self_describing(1), False)
-
-Test.assert_equals(is_self_describing(27273332), True)
-
-Test.assert_equals(is_self_describing(11), False)
-
-Test.assert_equals(is_self_describing(22), True)
-
-Test.assert_equals(is_self_describing(19212332), True)
-
-Test.assert_equals(is_self_describing(4444332231), False)
-
-Test.assert_equals(is_self_describing(881722888888), True)
+    pairs = [] 
+    while num > 1:
+        pairs.append(num % 100)
+        num //= 100
+    
+    pairs = [tuple(str(i)) for i in pairs]
+    
+    pairs = all(n.count(tup[1]) == int(tup[0]) 
+        for tup in pairs)
+    return pairs
+#
