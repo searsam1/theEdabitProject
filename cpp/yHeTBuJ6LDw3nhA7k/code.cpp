@@ -1,65 +1,47 @@
+#include <iostream>
+#include <vector>
+
 std::vector<std::string> makeBox(int n) {
 	
+	if (n == 1){
+		return {"#"};
+	}
+
+	std::string middle = "#";
+	for (int i=0; i<n-2; i++){
+		middle += ' ';
+	}
+	middle += '#';
+
+	std::string topBottom = "#";
+	for (int i=0; i<n-2; i++){
+		topBottom += '#';
+	}
+	topBottom += '#';
+
+	std::vector<std::string> v = {topBottom};
+
+	for (int i=1; i<n; i++){
+
+		if (i == n-1){
+			v.push_back(topBottom);
+		}
+		else{
+			v.push_back(middle);
+		}
+	}
+	return v;
 }
 
-TestsConsoleDescribe(make_box)
+int main(){
+	for (std::string s : makeBox(3)){
+		std::cout << "["  << s << "]"<< "\n" ;
+	}
+	return 0;
+}
 
-{
 
-	It(T1){Assert::That(makeBox(5), Equals(std::vector<std::string>({
 
-		"#####", 
 
-		"#   #", 
 
-		"#   #", 
 
-		"#   #", 
-
-		"#####"
-
-	})));}
-
-	It(T2){Assert::That(makeBox(6), Equals(std::vector<std::string>({
-
-		"######", 
-
-		"#    #", 
-
-		"#    #", 
-
-		"#    #", 
-
-		"#    #", 
-
-		"######"
-
-	})));}
-
-	It(T3){Assert::That(makeBox(4), Equals(std::vector<std::string>({
-
-		"####", 
-
-		"#  #", 
-
-		"#  #", 
-
-		"####"
-
-	})));}
-
-	It(T4){Assert::That(makeBox(2), Equals(std::vector<std::string>({
-
-		"##", 
-
-		"##"
-
-	})));}
-
-	It(T5){Assert::That(makeBox(1), Equals(std::vector<std::string>({
-
-		"#"
-
-	})));}
-
-};
