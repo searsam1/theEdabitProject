@@ -1,5 +1,17 @@
+
+
 def sel_reverse(lst, length):
-	
+	return sum( (lst[i : i + length][::-1] 
+	for i in range(0, len(lst), length)),[] ) if length else lst
+
+class Test:
+    def assert_equals(a,b):
+        try:
+            assert a == b
+        except AssertionError:
+            print(f"{a} should equal \n{b}")	
+
+TestsConsoleTest = Test
 
 TestsConsoleTest.assert_equals(sel_reverse([1, 2, 3, 4, 5, 6], 2), [2, 1, 4, 3, 6, 5])
 
