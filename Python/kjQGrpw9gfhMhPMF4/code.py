@@ -1,20 +1,20 @@
+
+def check_pal(s):
+    return s[::-1] == s
+
+check_pal("189989881")
+check_pal("abccba")
+
 def palindrome_set(lst):
-	
-
-TestsConsoleTest.assert_equals(palindrome_set(["cb77c", "ccc888", "ccc789", "abc89"]), [2, 2, 1, 0])
-
-Test.assert_equals(palindrome_set(["18a99b89cc881ba", "p7o8p987", "p7o", "p7o8"]), [1, 2, 1, 0])
-
-Test.assert_equals(palindrome_set(["ab9a", "abba", "aa78bb8bbaa7", "a88a"]), [2, 1, 2, 2])
-
-Test.assert_equals(palindrome_set(["789", "555", "ccc", "abba"]), [0, 1, 1, 1])
-
-Test.assert_equals(palindrome_set(["7a", "5f", "6c"]), [2, 2, 2])
-
-Test.assert_equals(palindrome_set(["7ab", "5fc", "6cd"]), [1, 1, 1])
-
-Test.assert_equals(palindrome_set(["87ab", "15fc", "26cd"]), [0, 0, 0])
-
-Test.assert_equals(palindrome_set(["1234ab", "144a441"]), [0, 2])
-
-Test.assert_equals(palindrome_set([""]), [0])
+    scores = []
+    for word in lst:
+        chars = "".join(i for i in word if i.isalpha())
+        print(chars)
+        nums = "".join(i for i in word if i.isnumeric())
+        print(nums)
+        score = check_pal(nums) + check_pal(chars)
+        scores.append(score)
+    return scores
+print(
+    palindrome_set(["18a99b89cc881ba", "p7o8p987", "p7o", "p7o8"])
+)
