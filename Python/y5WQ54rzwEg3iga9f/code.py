@@ -5,7 +5,7 @@ class Test:
         try:
             assert a == b
         except AssertionError:
-            print(f"{a} should equal \n{b}")
+            print(f"{a}\n should equal \n\t{b}")
 TestsConsoleTest = Test            
 
 TestsConsoleTest.assert_equals(profit(32, 69), [51, 50])
