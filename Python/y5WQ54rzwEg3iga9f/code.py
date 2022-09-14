@@ -1,5 +1,6 @@
 def profit(A, B):
 	...
+
 class Test:
     def assert_equals(a,b):
         try:
