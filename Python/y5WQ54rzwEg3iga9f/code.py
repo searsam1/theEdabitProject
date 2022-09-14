@@ -1,11 +1,11 @@
 def profit(A, B):
-	
+	...
 class Test:
     def assert_equals(a,b):
         try:
             assert a == b
         except AssertionError:
-            print(f"{a}\n should equal \n\t{b}")
+            print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
 
 TestsConsoleTest.assert_equals(profit(32, 69), [51, 50])
