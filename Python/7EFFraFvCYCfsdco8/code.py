@@ -1,5 +1,10 @@
+
+import re
+
 def decompose_address(txt):
-	...
+    p = r"(\d+) (\w+ \w\w) (\w+ *\w*), (\w\w) (\d+)"
+    return list(re.match(p,txt).group(1,2,3,4,5))
+    
 
 class Test:
     def assert_equals(a,b):
