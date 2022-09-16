@@ -1,5 +1,22 @@
+
+from datetime import datetime
+
+d = {
+    (3,4,5): {"start": "March", "end":  "May", "N": "Spring", "S": "Autumn"},
+    (6,7,8): {"start": "June", "end":  "August", "N": "Summer", "S": "Winter"},
+    (9,10,11): {"start": "September", "end":  "November", "N": "Autumn", "S": "Spring"},
+    (12,1,2): {"start": "December", "end":  "February", "N": "Winter", "S": "Summer"}
+
+}
+
 def hemisphere_season(hemisphere, date):
-	...
+    date = datetime.strptime(date.split(",")[0],"%B")
+    
+    for k in d:
+        if date.month in k:
+            res = d[k][hemisphere]
+            return res
+
 
 class Test:
     def assert_equals(a,b):
@@ -9,9 +26,9 @@ class Test:
             print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
 
-TestsConsoleTest.assert_equals(hemisphere_season("N", "June, 30"), "Summer", "Example #1")
-Test.assert_equals(hemisphere_season("N", "March, 1"), "Spring", "Example #2")
-Test.assert_equals(hemisphere_season("S", "September, 22"), "Spring", "Example #3")
+TestsConsoleTest.assert_equals(hemisphere_season("N", "June, 30"), "Summer")
+Test.assert_equals(hemisphere_season("N", "March, 1"), "Spring")
+Test.assert_equals(hemisphere_season("S", "September, 22"), "Spring")
 Test.assert_equals(hemisphere_season("S", "April, 20"), "Autumn")
 Test.assert_equals(hemisphere_season("N", "November, 20"), "Autumn")
 Test.assert_equals(hemisphere_season("S", "May, 8"), "Autumn")
