@@ -1,5 +1,29 @@
+
+
 def is_word_chain(words):
-	...
+    res = 0 
+    check_over = 0
+    while len(words) > 1:
+        first = words.pop(0)
+        second = words[0]
+        
+        if len(first) != len(second):
+            return False
+        for idx, char in enumerate(first):
+            other = second[idx]
+            if other != char:
+                check_over += 1
+                if check_over > 1:
+                    return False
+        check_over = 0 
+    return True
+
+
+
+
+
+
+
 
 class Test:
     def assert_equals(a,b):
