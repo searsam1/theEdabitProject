@@ -1,5 +1,16 @@
+
+import re
+
+
 def erase(txt):
-	...
+    while "#" in txt:
+        idx = txt.index("#")
+        if idx == 0:
+            txt = txt[1:]
+        else:
+            txt = txt[:idx-1] + txt[idx + 1:]
+    return txt
+
 
 class Test:
     def assert_equals(a,b):
