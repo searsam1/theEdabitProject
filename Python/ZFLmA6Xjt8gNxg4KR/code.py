@@ -1,5 +1,31 @@
-def sum_consecutives(lst):
-	...
+def sum_consecutives(lst):    
+    res = [] 
+    for i in range(len(lst)):
+        target = lst[i]
+        total = target
+        for j in range(len(lst)):
+            if i == j:
+                pass
+            else:
+                if lst[j] == target:
+                    total += target
+        try:
+            if res[-1] != total:
+                res.append(total)
+        except Exception:
+            if not res:
+                res.append(total)
+    return res
+
+
+
+
+
+            
+    
+
+        
+        
 
 class Test:
     def assert_equals(a,b):
