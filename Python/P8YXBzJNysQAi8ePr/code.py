@@ -1,5 +1,21 @@
+
 def digitaldrome(n):
-	...
+    n = str(n)
+    if len(set(n)) == 1:
+        return "Repdrome"
+    elif "".join(sorted(n)) == n:
+        # Ascending 
+        if len(set(n)) == len(n):
+            return "Metadrome"
+        else:
+            return "Plaindrome"
+    elif "".join(sorted(n, reverse=True)) == n:
+        # Descending
+        if len(set(n)) == len(n):
+            return "Katadrome"
+        else:
+            return "Nialpdrome"
+    return "Nondrome"
 
 class Test:
     def assert_equals(a,b):
@@ -9,12 +25,6 @@ class Test:
             print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
 
-TestsConsoleTest.assert_equals(digitaldrome(1357), "Metadrome", "Example #1")
-Test.assert_equals(digitaldrome(12344), "Plaindrome", "Example #2")
-Test.assert_equals(digitaldrome(7531), "Katadrome", "Example #3")
-Test.assert_equals(digitaldrome(9874441), "Nialpdrome", "Example #4")
-Test.assert_equals(digitaldrome(666), "Repdrome", "Example #5")
-Test.assert_equals(digitaldrome(1985), "Nondrome", "Example #6")
 Test.assert_equals(digitaldrome(33333), "Repdrome")
 Test.assert_equals(digitaldrome(1), "Repdrome")
 Test.assert_equals(digitaldrome(4899), "Plaindrome")
