@@ -1,5 +1,20 @@
+
+def get_price(dollar_amount):
+    return int(dollar_amount.strip("$"))
+
 def maximum_items(prices, budget):
-	...
+    
+    budget = get_price(budget)
+    total = 0 
+    item_count = 0 
+    for price in sorted(map(get_price, prices)):
+        if total + price <= budget:
+            item_count += 1
+            total += price
+        else:
+            break
+    return item_count if item_count else "Not enough funds!"
+
 
 class Test:
     def assert_equals(a,b):
