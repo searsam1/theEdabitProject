@@ -1,5 +1,12 @@
 def flatten(lst):
-	...
+    res = []
+    for i in lst:
+        if isinstance(i, list):
+            res += flatten(i)
+        else:
+            res.append(i)
+    return res
+    
 
 class Test:
     def assert_equals(a,b):
