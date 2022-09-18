@@ -1,5 +1,36 @@
+
+def semi(n):
+    total = 1
+    while n > 0:
+        total *= n
+        n -= 2
+    return total
+
+def fact(n):
+    total = 1
+    neg = None
+    if n < 0:
+        n *= -1
+        neg = True
+    while n > 0:
+        total *= n
+        n -= 1
+    return total * -1 if neg else total
+
+
+def alt(n):
+    total = 0
+    while n != 0:
+        total += fact(n)
+        if n < 0:
+            n += 1
+        else:
+            n -= 1
+        n *= -1
+    return total
+
 def alt_semi(n):
-	...
+	return alt(n) - semi(n)
 
 class Test:
     def assert_equals(a,b):
