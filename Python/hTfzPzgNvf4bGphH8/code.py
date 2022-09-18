@@ -1,5 +1,25 @@
+
+
+class Multiply:
+
+    def __init__(self, lst) -> None:
+        self.lst = lst
+    
+    def get_mult_sum(self):
+        total = 1
+        for i in self.lst:
+            total *= i
+        return total
+
+m = Multiply([1, 2, 3, -4])
+print(m.get_mult_sum())
+
+
+from datetime import datetime
 def convert_time(txt):
-	...
+    t = datetime.strptime(txt, "%I:%M:%S%p")
+    res = datetime.strftime(t, "%H:%M:%S")
+    return res
 
 class Test:
     def assert_equals(a,b):
