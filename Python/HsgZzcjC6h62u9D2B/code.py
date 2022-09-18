@@ -1,4 +1,25 @@
-def is_magic_square(arr):...
+def is_magic_square(arr):
+	sums = [] 
+	for row in arr:
+		sums.append(sum(row))
+	for col in zip(*arr):
+		sums.append(sum(col))
+	d_1, d_2 = [],[] 
+	for i in range(len(arr)):
+		for j in range(len(arr)):
+			if i == j:
+				d_1.append(arr[i][j])
+	sums.append(sum(d_1))
+	arr = arr[::-1]
+	for i in range(len(arr)):
+		for j in range(len(arr)):
+			if i == j:
+				d_2.append(arr[i][j])
+	sums.append(sum(d_2))
+	
+	return len(set(sums)) == 1
+			
+	
 
 class Test:
     def assert_equals(a,b):
