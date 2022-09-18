@@ -1,5 +1,26 @@
-def message_glitch(txt):
-	...
+
+import re
+from string import ascii_lowercase
+
+mappings = {ord(i) - 96 : i for i in ascii_lowercase}
+
+def message_glitch(txt):	
+    words = txt.split()
+    new_words = []
+    p = r"\d\d*|\D"
+    for word in words:
+        chars = re.findall(p, word)        
+        new_word = ""
+        for idx,char in enumerate(chars):
+            if char.isnumeric():
+                new_word += mappings[int(char)]
+            else:
+                new_word += char
+        new_words.append(new_word)
+    return " ".join(new_words)
+    
+
+    
 
 class Test:
     def assert_equals(a,b):
