@@ -1,5 +1,12 @@
 def is_harshad(n):
-	# recursive code here...
+  check = n
+  res = [] 
+  if n < 10:
+    return n
+  while n >= 1:
+    res.append(is_harshad(n%10))
+    n //= 10
+  return check % sum(res) == 0
 
 class Test:
     def assert_equals(a,b):
@@ -8,8 +15,7 @@ class Test:
         except AssertionError:
             print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
-
-TestsConsolefrom inspect import getsource
+from inspect import getsource
 from re import findall, MULTILINE
 
 def check_recursive(fn):
@@ -19,7 +25,6 @@ def check_recursive(fn):
     return len(findall(n, src, flags=MULTILINE)) > 1
   except OSError: return True
 
-Test.assert_not_equals(check_recursive(is_harshad), False, 'Recursion is required!')
 
 num_vector, res_vector = [
   [75, 171, 481, 89, 516, 200, 209, 12345, 53, 27],
