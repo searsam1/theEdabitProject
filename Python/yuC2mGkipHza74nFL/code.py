@@ -1,5 +1,17 @@
+
 def two_powers_of_two(n):
-	...
+    if n < 10:
+        return True if n else 0
+    twos = [2]
+    while twos[-1] < n:
+        twos.append(twos[-1] * 2) 
+    for two in twos:
+        if n - two in twos:
+            return True if n else 0
+    return False
+    
+    
+    
 
 class Test:
     def assert_equals(a,b):
