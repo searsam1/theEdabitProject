@@ -1,4 +1,24 @@
-def battle_outcome(num):...
+
+from functools import reduce
+import re
+
+def battle_outcome(num): 
+    
+    n = str(num)
+    p = r"\d\d|\d"
+    prog = re.compile(p)
+    prog = prog.findall(n)
+    res = [] 
+    for i in prog:
+        if len(i) == 1:
+            res.append(i)
+        elif i[0] != i[1]:
+            res.append(max([i[0], i[1]]))
+    return int("".join(res))
+
+
+    
+
 
 class Test:
     def assert_equals(a,b):
