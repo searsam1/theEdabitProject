@@ -1,6 +1,14 @@
-def self_descriptive(n):
-	...
-
+def self_descriptive(n):	
+    if len(str(n)) % 2:
+        return False
+    lst = [str(n)[i:i+2] for i in range(0,len(str(n)),2)]
+    n = str(n)
+    for i in lst:
+        count, num = int(i[0]), i[1]
+        if n.count(num) != count:
+            return False
+    return True
+    
 class Test:
     def assert_equals(a,b):
         try:
