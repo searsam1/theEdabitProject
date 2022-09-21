@@ -1,27 +1,21 @@
-def group_monotonic(a):
-	...
 
-class Test:
-    def assert_equals(a,b):
-        try:
-            assert a == b
-        except AssertionError:
-            print(f"{a}\n > should equal \n\t{b}")
-TestsConsoleTest = Test            
 
-TestsConsolelst = [
-    [[], []],
-    [[0], []],
-    [[1], []],
-    [[0, 1], []],
-    [[1, 0], []],
-    [[1, 1], []],
-    [[0, 1, 2], []],
-    [[2, 1, 0], []],
-    [[0, 2, 1], [1]],
-    [[1, 0, 2], [1]],
-    [[0, 1, 1, 0], [2]],
-    [[1, 2, 3, 4, 4, 4, 3, 2, 1], [5]],
-    [[0, 6, 10, 9, 3, -3, -9, -10, -6, 0], [2, 7]]]
-for input, output in lst:
-    Test.assert_equals(group_monotonic(input), output)
+def binary_to_text(n):
+    decoded = ""
+    for i in range(0,len(n), 8):
+        decoded += chr( int( n[i:i+8], 2) )
+    return decoded
+
+def text_to_binary(word):
+    res = "" 
+    for i in word:
+        res += (bin(ord(i)).lstrip("0b")).rjust(8,"0") 
+    return res
+
+
+words = "red", "green","blue"
+
+for i in words:
+    enc = text_to_binary(i)
+    dec = binary_to_text(enc)
+    print(enc, "➩",dec)
