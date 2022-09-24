@@ -1,5 +1,25 @@
 def elapsed(t1, t2):
-	...
+    s  = t2 - t1
+    days = s // 86400
+    hours = s % 86400 // 3600 
+    mins = s % 86400 % 3600 // 60
+    seconds = s % 86400 % 3600 % 60
+    
+    def f(time, mode):
+        if time:
+            if time > 1:
+                time = "{} {}s".format(time, mode)
+            elif time == 1:
+                time = "{} {}".format(time, mode)
+        return time if time else None
+
+    days = f(days, "day")
+    hours = f(hours, "hour")
+    mins = f(mins, 'minute')
+    seconds = f(seconds, 'second')
+    
+    res = ", ".join(i for i in [days, hours, mins, seconds] if i)
+    return res
 
 class Test:
     def assert_equals(a,b):
