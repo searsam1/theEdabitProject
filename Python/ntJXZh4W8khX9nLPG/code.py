@@ -1,25 +1,28 @@
+
 def count(n):
-	# your recursive solution in here...
+    n = abs(n)
+    if n < 10:
+        return 1
+
+    s = 0
+    while n >= 1:
+        s += count(n % 10)
+        n //= 10
+    return s
+    
+    
+    
+    
+        
 
 class Test:
+    
+    @staticmethod
     def assert_equals(a,b):
         try:
             assert a == b
         except AssertionError:
             print(f"{a}\n > should equal \n\t{b}")
-TestsConsoleTest = Test            
-
-TestsConsolefrom inspect import getsource
-from re import findall, MULTILINE
-
-def check_recursive(fn):
-  try:
-    src, n = getsource(fn), fn.__name__
-    if n == '<lambda>': n = src.split('=')[0].strip()
-    return len(findall(n, src, flags=MULTILINE)) > 1
-  except OSError: return True
-
-Test.assert_not_equals(check_recursive(count), False, 'Recursion is required!')
 
 num_vector, res_vector = [
   [0, 318, -92563, 4666, -314890, 654321, 638476, 12345, 1289396, -1232323, 12839393, -231273683],
