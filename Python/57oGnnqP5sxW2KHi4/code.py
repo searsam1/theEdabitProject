@@ -1,5 +1,27 @@
+
+
+def check(x):
+    if x < 0: return 0
+    if x > 255: return 255
+    return x
+
+
+def upzip(lst):
+    res = [] 
+    for i in lst:
+        res.append(check(255 - i))
+    return res
+
+
 def invert(lst):
-	...
+    arr = [] 
+    for l in lst:
+        new_row = []
+        for ll in l:
+            new_row.append(upzip(ll))
+        arr.append(new_row)
+    return arr
+
 
 class Test:
     def assert_equals(a,b):
