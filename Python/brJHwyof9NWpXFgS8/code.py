@@ -1,5 +1,10 @@
 def bill_count(money, bills):
-	...
+    bills, total = bills[::-1], 0
+    for bill in bills:
+        total += money // bill
+        money %= bill
+        if not money: return total
+    return total
 
 class Test:
     def assert_equals(a,b):
