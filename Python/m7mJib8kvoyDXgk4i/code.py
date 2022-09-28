@@ -1,5 +1,30 @@
+
+
 def max_sum(nums):
-	...
+	
+    sums = [] 
+    res = [] 
+    for n in nums:
+        res.append(n)
+        if sum(res) < 0:
+            sums.append(res)
+            res = [] 
+    
+    sums.append(res)
+
+    lst = [] 
+    for res in sums:
+        r = []
+        for idx,i in enumerate(res):
+            if idx == 0 or idx == len(res) - 1:
+                if i > 0:
+                    r.append(i)
+            else:
+                r.append(i)
+        lst.append(r)
+    return sum(max(lst, key=sum))
+            
+                
 
 class Test:
     def assert_equals(a,b):
