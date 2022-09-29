@@ -1,5 +1,14 @@
+
+
+def un_bunch(d):
+    quantity = d["quantity"]
+    d["quantity"] = 1
+    d2 = [ d for _ in range(quantity) ] 
+    return d2
+
 def split_bunches(bunches):
-	...
+    return sum(map(un_bunch, bunches),[])
+    
 
 class Test:
     def assert_equals(a,b):
