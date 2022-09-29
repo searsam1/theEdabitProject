@@ -1,6 +1,22 @@
 def recur_index(txt):
-	...
-
+	if not txt:
+		return {}
+	capture, res = [], None
+	for i in txt:
+		if not i in capture:
+			capture.append(i)
+		elif i in capture:
+			res = i
+			break
+	if not res:
+		return {}
+	idx1 = txt.index(res)
+	txt = txt[:idx1] + txt[idx1+1:]
+	idx2 = txt.index(res) + 1 # +1 b/c of pop
+	
+	d = {res : [idx1, idx2]}
+	return d
+			
 class Test:
     def assert_equals(a,b):
         try:
