@@ -1,5 +1,24 @@
-def primal_strength(n):
-	...
+#
+def prime(n):
+	for i in range(2, n):
+		if not n % i:
+			return False
+	return True 
+
+
+def primal_strength(n):	
+	n_minus, n_plus = n, n
+	lower, upper = 1, 1
+	n_minus -= 1
+	n_plus += 1
+	while not prime(n_minus):
+		n_minus -= 1
+		lower += 1
+	while not prime(n_plus):
+		n_plus += 1
+		upper += 1
+	return "Balanced" if lower == upper else ["Strong", "Weak"][lower < upper]
+#
 
 class Test:
     def assert_equals(a,b):
