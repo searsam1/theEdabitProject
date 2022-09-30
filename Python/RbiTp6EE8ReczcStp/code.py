@@ -1,5 +1,6 @@
 def zeroes_to_end(lst):
-	...
+	lst.sort(reverse=False, key=lambda x:x==0)
+	return lst
 
 class Test:
     def assert_equals(a,b):
@@ -8,8 +9,7 @@ class Test:
         except AssertionError:
             print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
-
-TestsConsolea1 = [1, 2, 0, 0, 4, 0, 5]
+a1 = [1, 2, 0, 0, 4, 0, 5]
 a2 = [0, 0, 1, 3]
 a3 = [0, 0, 2, 0, 5]
 a4 = [4, 4, 5]
