@@ -1,6 +1,11 @@
+from datetime import datetime 
 def elapsed_time(sa, st):
-	...
+    sa, st = map( lambda x: datetime.strptime(x, "%H:%M:%S"), [sa, st] )
+    res =  str(st - sa).rjust(8, "0") .split("-1 day, ")
+    return res[0] if len(res) == 1 else res[-1].rjust(8, "0")
 
+    
+	
 class Test:
     def assert_equals(a,b):
         try:
