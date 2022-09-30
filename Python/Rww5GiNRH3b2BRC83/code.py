@@ -1,5 +1,10 @@
 def data_regex_lovely(txt):
-	...
+    res = list(map(lambda x: x.split("="),txt.split("&")))
+    res = { i[0] : i[1] for i in res }
+    for k,v in res.items():
+        if k == "id":
+            res[k] = int(v)
+    return res
 
 class Test:
     def assert_equals(a,b):
