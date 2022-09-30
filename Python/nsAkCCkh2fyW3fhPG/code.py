@@ -1,4 +1,4 @@
-param = ""...
+param = '")[\'Error\'], ("'
 
 class Test:
     def assert_equals(a,b):
@@ -8,12 +8,13 @@ class Test:
             print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
 
-TestsConsoleimport random
+
+import random
 
 def search(txt):
 	return {'Error': 'No products found.'}
 
-for _ in range(14):
+for _ in range(1):
 	users = {
 		'user %s' % k: 'password' + str(random.randrange(10, 100))
 		for k in range(5)
