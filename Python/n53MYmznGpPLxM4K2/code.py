@@ -1,5 +1,8 @@
 def license(me, agents, others):
-	...
+    all_p = sorted((me + " " + others).split())
+    groups = [all_p[i:i+agents] for i in range(0, len(all_p), agents)]
+    idx = [i for i in groups if me in i]
+    return (groups.index(idx[0]) + 1) * 20
 
 class Test:
     def assert_equals(a,b):
