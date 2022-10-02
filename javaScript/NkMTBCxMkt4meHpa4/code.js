@@ -1,8 +1,7 @@
 function totalAmountAdjectives(obj) {
-	
-}...
-
-TestsConsoleconst obj = { a: "moron" }
+	return Object.keys(obj).length;
+}
+obj = { a: "moron" }
 const obj2 = { a: "moron", b: "scumbag", c: "moron", d: "dirtbag" } 
 const obj3 = {b: "scumbag", c: "moron", d: "dirtbag" } 
 let dynamic = {}
