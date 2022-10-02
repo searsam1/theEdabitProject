@@ -1,8 +1,8 @@
 function shiftToRight(x, y) {
-	
-}...
+    return Math.floor(x / Math.pow(2,y))
+}
 
-TestsConsoleconst opCheck = f => !`${f}`.match(RegExp('>>', 'gm'))
+const opCheck = f => !`${f}`.match(RegExp('>>', 'gm'))
 Test.assertNotEquals(opCheck(shiftToRight), false,
     "The use of right shift operator (>>) is prohibited!")
 
