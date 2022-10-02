@@ -1,6 +1,7 @@
 function seriesResistance(arr) {
-	
-}...
+	const sum = arr.reduce((a, b) => a + b, 0)
+  	return sum <= 1 ? sum + " ohm" : sum + " ohms";
+}
 
 TestsConsoleTest.assertEquals(seriesResistance([1, 5, 6, 3]), "15 ohms")
 Test.assertEquals(seriesResistance([0.2, 0.3, 0.4]), "0.9 ohm")
