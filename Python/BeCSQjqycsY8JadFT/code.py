@@ -9,7 +9,7 @@ class Test:
             print(f"{a}\n > should equal \n\t{b}")
 TestsConsoleTest = Test            
 
-TestsConsolefrom inspect import getsource
+from inspect import getsource
 from re import findall, MULTILINE
 
 def check_recursive(fn):
