@@ -1,5 +1,36 @@
 def carry_digits(n1, n2):
-	...
+    
+    n1, n2 = str(n1)[::-1], str(n2)[::-1]
+
+    mx = max([n1, n2])
+    carry = 0 
+    count = 0 
+    new_n = ""
+    for i in range(len(mx)):
+        try:
+            c1 = int(n1[i])
+        except IndexError:
+            c1 = 0
+        try:
+            c2 = int(n2[i])
+        except IndexError:
+            c2 = 0
+        res = c1 + c2
+
+        if carry:
+            res += carry 
+            carry = 0 
+
+        if res >= 10:
+            carry = int(str(res)[0])
+            count += 1
+            res = int(str(res)[1])
+        
+        new_n += str(res)
+    new_n += str(res)
+    new_n = int(new_n[::-1])
+    return count
+
 
 class Test:
     def assert_equals(a,b):
