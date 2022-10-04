@@ -1,5 +1,23 @@
+
+import math
+
+
+
 def shape_in_shape(shape1, shape2):
-	...
+    def Circle(r) : return math.pi * int(r)**2
+    def Triangle(b, h) : return int(b) * int(h) / 2
+    def Rectangle(width, l=None) : return int(width) * int(l) if l else int(width)**2
+    def Pentagon(a) : return  ((5 * (5 + 2 * 5**.5))**.5 * int(a)**2) / 4
+    def shape(s) : return list(map(lambda x: x.strip(","), s.split()))
+    s1, s2 = shape(shape1), shape(shape2)
+    res_s1 = {k : v(*s1[1:]) for k,v in vars().items() if k == s1[0]}
+    res_s2 = {k : v(*s2[1:]) for k,v in vars().items() if k == s2[0]}
+    return (res_s1[s1[0]] > res_s2[s2[0]])
+    
+    
+
+
+
 
 class Test:
     def assert_equals(a,b):
