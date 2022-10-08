@@ -1,5 +1,8 @@
 def advanced_sort(lst):
-	...
+    s = sorted( list(set(lst)), key=lst.index)
+    return [[i] * lst.count(i) for i in s]
+
+    
 
 class Test:
     def assert_equals(a,b):
