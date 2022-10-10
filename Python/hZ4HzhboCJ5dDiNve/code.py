@@ -1,5 +1,20 @@
-def special_reverse_string(txt):
-	...
+def special_reverse_string(s):
+    
+    spaces = [idx for idx, i in enumerate(s) if i == " "]
+    uppers = [idx for idx, i in enumerate(s) if i.isupper()]
+    s_r = list(s[::-1].replace(" ", "").lower())
+
+    for space in spaces:
+        s_r.insert(space, " ")
+
+    for up in uppers:
+        s_r[up] = s_r[up].upper()
+    
+    return "".join(s_r)
+        
+    
+    
+    
 
 class Test:
     def assert_equals(a,b):
