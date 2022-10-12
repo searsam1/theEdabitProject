@@ -1,5 +1,14 @@
-def caesar_cipher(s, k):
-	...
+
+import string
+
+
+def caesar_cipher(s, k):	
+    k %= 26
+    chop = string.ascii_lowercase[-k:]
+    shifted = chop + string.ascii_lowercase[:-k]
+    d = dict(zip(shifted, string.ascii_lowercase))
+    d.update(dict(zip(shifted.upper(), string.ascii_uppercase)))
+    return "".join(d.get(char, char) for char in s)
 
 class Test:
     def assert_equals(a,b):
