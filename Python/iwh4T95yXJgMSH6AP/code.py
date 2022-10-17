@@ -1,5 +1,25 @@
 def keep_skyline(grid):
-	...
+	cols = [i for i in zip(*grid)]
+	row_maxs = list(map(max, grid))
+	col_maxes = list(map(max, cols))
+	
+	res = [] 
+	for i in range(len(grid)):
+		new_row = [] 
+		row_max = row_maxs[i]
+		for j in range(len(grid[i])):
+			ele = grid[i][j]
+			col_max = col_maxes[j]
+			if ele == 0:
+				new_row.append(0)
+			elif ele == col_max or ele == row_max:
+				new_row.append(ele)
+			elif row_max <= col_max:
+				new_row.append(row_max)
+			elif row_max > col_max:
+				new_row.append(col_max)
+		res.append(new_row)
+	return res
 
 class Test:
     def assert_equals(a,b):
