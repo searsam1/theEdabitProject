@@ -1,5 +1,25 @@
+#
+
+
 def grayscale(lst):
-	...
+    return  [ list(map(mean, row)) for row in lst ]
+
+
+def sum_(lst):
+    res = [] 
+    for i in lst:
+        if i < 0: res.append(0)
+        elif i > 255: res.append(255)
+        else: res.append(i)
+    return sum(res)
+
+
+def mean(lst):
+    average = round(sum_(lst) / len(lst))
+    return [average] * len(lst)
+
+
+#
 
 class Test:
     def assert_equals(a,b):
