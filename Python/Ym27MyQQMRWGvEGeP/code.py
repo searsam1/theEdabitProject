@@ -1,5 +1,24 @@
-def is_consecutive(s):
-	# recursive code in here...
+def is_consecutive(s, n=0):
+	# recursive code in here
+	if n:
+		res = [ int(s[i:i+n]) for i in range(0, len(s), n) ] 
+		return res
+	all_blocks = [] 
+	while n < len(s) // 2:
+		all_blocks.append( is_consecutive(s, n + 1) )
+		n += 1
+	for block in all_blocks:
+		res = [] 
+		for i in range(1, len(block)):
+			if block[i-1] - block[i] in [1, -1]:
+				res.append(block[i-1] - block[i])
+		if len(set(res)) == 1 and len(res) == len(block) - 1:
+			return True 
+	return False
+		
+import string
+code = [ string.ascii_lowercase[i:i+5] for i in range(0, 26, 5) ]
+print(code)		
 
 class Test:
     def assert_equals(a,b):
@@ -7,18 +26,7 @@ class Test:
             assert a == b
         except AssertionError:
             print(f"{a}\n > should equal \n\t{b}")
-TestsConsoleTest = Test            
-
-TestsConsolefrom inspect import getsource
-from re import findall, MULTILINE as M
-
-def is_recursive(src):
-	try:
-		n = getsource(src).split("=")[0].strip() if src.__name__ == "<lambda>" else src.__name__
-		return len(findall(n, getsource(src), flags=M)) > 1
-	except OSError: return True
-
-Test.assert_not_equals(is_recursive(is_consecutive), False, 'Recursion is required!')
+TestsConsoleTest = Test
 
 actual_param = [
   "121314151617", "123124125", "667666", "23242526", "444445", "1234567", "123412351236",
